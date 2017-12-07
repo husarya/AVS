@@ -17,6 +17,9 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import pl.coderslab.converter.ClientConverter;
+import pl.coderslab.converter.StatusConverter;
+
 
 @Configuration
 @EnableWebMvc
@@ -47,10 +50,15 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		return viewResolver;
 	}
 
-//	@Bean
-//	public BrandConverter getBrandConverter(){
-//		return new BrandConverter();
-//	}
+	@Bean
+	public ClientConverter getClientConverter(){
+		return new ClientConverter();
+	}
+	
+	@Bean
+	public StatusConverter getStatusConverter(){
+		return new StatusConverter();
+	}
 
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {

@@ -18,7 +18,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">Audio Video Serwis</a>
+			<a class="navbar-brand" href="/AVS">AVS</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive"
 				aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +26,14 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link" href="#">Home
+					<li class="nav-item active"><a class="nav-link" href="/AVS">Home
 							<span class="sr-only">(current)</span>
 					</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Services</a>
+					<li class="nav-item"><a class="nav-link" href="<c:url value = "about"/>">About</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="<c:url value = "contact"/>">Contact</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="#">Contact</a>
+					<li class="nav-item"><a class="nav-link" href="<c:url value = "/login"/>">Log in</a>
 					</li>
 				</ul>
 			</div>

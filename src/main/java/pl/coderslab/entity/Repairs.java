@@ -13,23 +13,63 @@ import org.hibernate.validator.constraints.NotBlank;
 @Table(name = "repairs")
 public class Repairs {
 
-	Repairs() {
-	}
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	@NotBlank
-	private String descriptionOfTheFault;
+	
 	@NotBlank
 	private String descriptionOfRepair;
+	
 	@NotNull
 	private Long workCosts;
+	
 	private Long partsCosts;
+	
 	@NotBlank
 	private String technician;
+	
 	private String parts;
-	@NotBlank
-	private String deliveredBy;
+	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	public String getDescriptionOfRepair() {
+		return descriptionOfRepair;
+	}
+	public void setDescriptionOfRepair(String descriptionOfRepair) {
+		this.descriptionOfRepair = descriptionOfRepair;
+	}
+	public Long getWorkCosts() {
+		return workCosts;
+	}
+	public void setWorkCosts(Long workCosts) {
+		this.workCosts = workCosts;
+	}
+	public Long getPartsCosts() {
+		return partsCosts;
+	}
+	public void setPartsCosts(Long partsCosts) {
+		this.partsCosts = partsCosts;
+	}
+	public String getTechnician() {
+		return technician;
+	}
+	public void setTechnician(String technician) {
+		this.technician = technician;
+	}
+	public String getParts() {
+		return parts;
+	}
+	public void setParts(String parts) {
+		this.parts = parts;
+	}
+
+	
 	
 }
