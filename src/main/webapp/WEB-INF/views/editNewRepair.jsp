@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/>">
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/full.css"/>">
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/login.css"/>">
-<title>New Order</title>
+<title>Edit Repair</title>
 </head>
 
 <body>
@@ -46,6 +46,7 @@
 	<div class = "wrapper">
 	     
 		<form:form method="post" modelAttribute="client" class="form-signin">
+        <form:hidden path="id" value="${client.id}" />
         
         <form:input path="firstName" class="form-control" placeholder="First Name"/> 
         
@@ -76,9 +77,11 @@
         <form:input path="dateOfAdd" class="form-control" placeholder="Date: 01-01-2000"/>
         
         <form:textarea path="descriptionOfTheFault" class="form-control" placeholder="Description of the fault"/> <br><br>
-
-			<input class="btn btn-lg btn-primary btn-block" type="submit" value="Save">
+        
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Save">
+		
 		</form:form>
+		
 	</div>
 
 

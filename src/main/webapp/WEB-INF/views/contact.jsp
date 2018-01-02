@@ -11,7 +11,8 @@
 
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/>">
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/full.css"/>">
-<title>Fajny tytuł</title>
+
+<title>Contact</title>
 </head>
 
 <body>
@@ -39,7 +40,17 @@
 			</div>
 		</div>
 	</nav>
+	<br><br><br>
 	
+	<!--  <div align="right">
+			<div class="bg-danger text-white">Łukasz Skworc</h3></div>
+			<div class="bg-primary text-white">ul. Podlas 12/4</h3></div>
+			<div class="bg-warning text-white">41-703 Ruda Śląska</h3></div>
+			<div class="bg-primary text-white">Tel: 533 608 121</div>
+		</div> -->
+		
+		
+	<
 	
     
 

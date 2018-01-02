@@ -11,7 +11,9 @@
 
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/>">
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/full.css"/>">
-<title>Fajny tytuł</title>
+
+<title>About</title>
+
 </head>
 
 <body>
@@ -39,9 +41,20 @@
 			</div>
 		</div>
 	</nav>
+	<br><br><br>
+	<center>
+		<div >
+			<div class="bg-danger text-white"><h3>Final Project</h3></div>
+			<div class="bg-primary text-white"><h3>Java Web: Developer</h3></div>
+			<div class="bg-warning text-white"><h3>Katowice</h3></div>
+			<div class="bg-primary text-white"><h3>Łukasz Skworc</h3></div>
+		</div>
+	</center>
+	
+	
+	
 
-
-
+    
 	<script src="<c:url value = "/resources/vendor/jquery/jquery.min.js"/>"></script>
 	<script src="<c:url value = "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
 </body>

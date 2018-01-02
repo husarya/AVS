@@ -31,7 +31,7 @@
 					</a></li>
 					<li class="nav-item"><a class="nav-link" href="<c:url value = "user/inRepair"/>">In Repair</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="<c:url value = "user/describeRepair"/>">Finish Repair</a></li>
+					<li class="nav-item"><a class="nav-link" href="<c:url value = "user/repairing"/>">Repair</a></li>
 					
 					<li class="nav-item"><a class="nav-link" href="<c:url value = "user/repaired"/>">Repaired</a>
 					</li>

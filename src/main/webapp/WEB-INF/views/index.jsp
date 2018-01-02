@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/>">
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/full.css"/>">
-<title>Fajny tytuł</title>
+<title>Home</title>
 </head>
 
 <body>

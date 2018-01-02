@@ -14,9 +14,7 @@
 	href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/>">
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/table.css"/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value="/resources/css/hide.css"/>">
-<title>In Repair</title>
+<title>Repaired</title>
 </head>
 
 <body>
@@ -56,7 +54,7 @@
 	<center>
 		<div class="table">
 
-			<div class="row header">
+			<div class="row header green">
 				<div class="cell">#</div>
 				<div class="cell">
 					<b>Client</b>
@@ -80,71 +78,70 @@
 					<b>Action</b>
 				</div>
 			</div>
-			<c:forEach items="${clients}" var="client">
+			<c:forEach items="${test}" var="repairs">
 				<div class="row">
 					<div class="cell">
-						<b>${client.id}</b>
+						<b>${repairs.client.id}</b>
 					</div>
 					<div class="cell">
-						<b>${client.firstName} ${client.lastName}</b>
+						<b>${repairs.client.firstName} ${repairs.client.lastName}</b>
 					</div>
 					<div class="cell">
-						<b>${client.dateOfAdd}</b>
+						<b>${repairs.client.dateOfAdd}</b>
 					</div>
 					<div class="cell">
-						<b>${client.brand} ${client.model} ${client.colour}</b>
+						<b>${repairs.client.brand} ${repairs.client.model} ${repairs.client.colour}</b>
 					</div>
 					<div class="cell">
-						<b>${client.phone} ${client.email}</b>
+						<b>${repairs.client.phone} ${repairs.client.email}</b>
 					</div>
 					<div class="cell">
-						<b>${client.descriptionOfTheFault}</b>
+						<b>${repairs.client.descriptionOfTheFault}</b>
 					</div>
 					<div class="cell">
-						<b>${client.status.status}</b>
+						<b>${repairs.client.status.status}</b>
 					</div>
 					<div class="cell">
-						<a href="<c:url value="/user/edit/${client.id}"/>"><button
-								type"button"  class="btn btn-primary">EDIT</button></a> <a
-							href="<c:url value="/user/delete/${client.id}"/>">
-							<button type"button"  class="btn btn-danger">Delete</button>
-						</a>
-					</div>
-
-				</div>
-
-				<div class="row">
-
-					<p class="cell">
-						<b>^^</b>
-					</p>
-					<p class="cell">
-						<b>${client.firstName} ${client.lastName}</b>
-					</p>
-					<p class="cell">
-						<b>${client.dateOfAdd}</b>
-					</p>
-					<p class="cell">
-						<b>${client.brand} ${client.model} ${client.colour}</b>
-					</p>
-					<p class="cell">
-						<b>${client.phone} ${client.email}</b>
-					</p>
-					<p class="cell">
-						<b>${client.repairs.descriptionOfRepair}</b>
-					</p>
-					<p class="cell">
-						<b>${client.status.status}</b>
-					</p>
-					<p class="cell">
 						<b></b>
-					</p>
+					</div>
+				</div>
+                
+				<div class="row">
+					<div class="cell">
+						<b>${repairs.id}</b>
+					</div>
+					<div class="cell">
+						<b>${repairs.client.id} ${repairs.client.lastName}</b>
+					</div>
+					<div class="cell">
+						<b>${repairs.descriptionOfRepair}</b>
+					</div>
+					<div class="cell">
+						<b>${repairs.workCosts} </b>
+					</div>
+					<div class="cell">
+						<b>${repairs.partsCosts}</b>
+					</div>
+					<div class="cell">
+						<b>${repairs.technician}</b>
+					</div>
+					<div class="cell">
+						<b> ${repairs.parts} </b>
+					</div>
+					<div class="cell">
+						<b> ${repairs.dateOfRepair}</b>
+					</div>
+
 
 				</div>
 			</c:forEach>
+			
 
 		</div>
 	</center>
+
+
+
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -152,6 +149,7 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="<c:url value = "/resources/vendor/jquery/slide.js"/>"></script>
+	<script src="<c:url value = "/resources/vendor/jquery/jquery.min.js"/>"></script>
 	<script src="<c:url value = "/resources/vendor/jquery/jquery.min.js"/>"></script>
 	<script
 		src="<c:url value = "/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>

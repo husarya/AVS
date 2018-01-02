@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -22,16 +23,23 @@ public class Repairs {
 	private String descriptionOfRepair;
 	
 	@NotNull
-	private Long workCosts;
+	private String workCosts;
 	
-	private Long partsCosts;
+	private String partsCosts;
 	
 	@NotBlank
 	private String technician;
 	
 	private String parts;
 	
+	@NotBlank
+	private String dateOfRepair;
 	
+	@OneToOne
+	private Client client;
+	
+	@OneToOne Status status;
+
 	public Long getId() {
 		return id;
 	}
@@ -45,16 +53,16 @@ public class Repairs {
 	public void setDescriptionOfRepair(String descriptionOfRepair) {
 		this.descriptionOfRepair = descriptionOfRepair;
 	}
-	public Long getWorkCosts() {
+	public String getWorkCosts() {
 		return workCosts;
 	}
-	public void setWorkCosts(Long workCosts) {
+	public void setWorkCosts(String workCosts) {
 		this.workCosts = workCosts;
 	}
-	public Long getPartsCosts() {
+	public String getPartsCosts() {
 		return partsCosts;
 	}
-	public void setPartsCosts(Long partsCosts) {
+	public void setPartsCosts(String partsCosts) {
 		this.partsCosts = partsCosts;
 	}
 	public String getTechnician() {
@@ -69,7 +77,28 @@ public class Repairs {
 	public void setParts(String parts) {
 		this.parts = parts;
 	}
-
+	public String getDateOfRepair() {
+		return dateOfRepair;
+	}
+	public void setDateOfRepair(String dateOfRepair) {
+		this.dateOfRepair = dateOfRepair;
+	}
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+	
+	
+	
+    
 	
 	
 }

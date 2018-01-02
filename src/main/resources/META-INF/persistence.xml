@@ -6,8 +6,8 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
     <persistence-unit name="avsPersistenceUnit">
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/AVS" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="coderslab" />
+            <property name="javax.persistence.jdbc.user" value="husarya" />
+            <property name="javax.persistence.jdbc.password" value="kepa8901" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.schema-generation.database.action"
                       value="none" />

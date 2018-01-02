@@ -1,8 +1,6 @@
 package pl.coderslab.entity;
 
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -32,8 +32,10 @@ public class Client {
 	@NotBlank
 	private String postCode;
 	@NotBlank
+	@Email(message = "Wrong email")
 	private String email;
-	@NotBlank
+	
+	@Size(min = 7, message = "At least 7 digits")
 	private String phone;
 	@NotBlank
 	private String brand;
@@ -167,20 +169,4 @@ public class Client {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-	
-	
-
-//	public Repairs getRepairs() {
-//		return repairs;
-//	}
-//	public void setRepairs(Repairs repairs) {
-//		this.repairs = repairs;
-//	}
-//	public Status getStatus() {
-//		return status;
-//	}
-//	public void setStatus(Status status) {
-//		this.status = status;
-//	}
-//	
 }

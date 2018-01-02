@@ -1,6 +1,7 @@
 package pl.coderslab;
 
 import javax.persistence.EntityManagerFactory;
+import javax.validation.Validator;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,6 +11,7 @@ import org.springframework.format.FormatterRegistry;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -18,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import pl.coderslab.converter.ClientConverter;
+import pl.coderslab.converter.RepairsConverter;
 import pl.coderslab.converter.StatusConverter;
 
 
@@ -59,6 +62,11 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	public StatusConverter getStatusConverter(){
 		return new StatusConverter();
 	}
+	
+	@Bean
+	public RepairsConverter getRepairsConverter(){
+		return new RepairsConverter();
+	}
 
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -72,8 +80,15 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addFormatters(FormatterRegistry registry){
-//		registry.addConverter(getBrandConverter());
+		registry.addConverter(getClientConverter());
+		registry.addConverter(getRepairsConverter());
+		registry.addConverter(getStatusConverter());
 		
+	}
+	
+	@Bean
+	public Validator validator()	{
+	     return	new	LocalValidatorFactoryBean();
 	}
 
 }
